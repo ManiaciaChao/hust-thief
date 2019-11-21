@@ -1,0 +1,26 @@
+{
+  "checkInterval": 5,
+  "destFolder": "C:\\Users\\EvilC\\Pictures\\Saved Pictures\\test",
+  "fileTypes": [
+    ".jpg",
+    ".jpeg",
+    ".gif",
+    ".webp",
+    ".svg",
+    ".tiff",
+    ".tif",
+    ".png",
+    ".bmp",
+    ".ppt",
+    ".pptx",
+    ".doc",
+    ".docx",
+    ".pdf"
+  ],
+  "upload": {
+    "host": "127.0.0.1",
+    "localPort": 20015,
+    "remotePort": 20016,
+    "saveDir": "./uploads"
+  }
+}

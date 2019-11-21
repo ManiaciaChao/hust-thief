@@ -1,0 +1,22 @@
+{
+  "name": "hust-thief",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "maniacata",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node ./dist/index.js",
+    "serve": "node ./dist/server.js"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.11",
+    "@types/node-powershell": "^3.1.0",
+    "babel-cli": "^6.26.0"
+  },
+  "dependencies": {
+    "enet": "^0.2.9",
+    "node-powershell": "^4.0.0",
+    "udp-messaging": "^0.4.0"
+  }
+}
