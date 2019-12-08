@@ -1,0 +1,1 @@
+WScript.CreateObject("WScript.Shell").Run "node ./dist/index.js",0

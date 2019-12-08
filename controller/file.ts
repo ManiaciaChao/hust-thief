@@ -41,7 +41,11 @@ export const processFilename = (filePath: string) =>
     .join("-")}-${basename(filePath)}`;
 
 export const copy = (filePath: string) => {
-  copyFileSync(filePath, join(normalize(destFolder), processFilename(filePath)));
+  mkdir(destFolder);
+  copyFileSync(
+    filePath,
+    join(normalize(destFolder), processFilename(filePath))
+  );
 };
 
 export const mkdir = (path: string) => {

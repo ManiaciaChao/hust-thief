@@ -16,11 +16,11 @@
     ".doc",
     ".docx",
     ".pdf"
-  ],
-  "upload": {
-    "host": "127.0.0.1",
-    "localPort": 20015,
-    "remotePort": 20016,
-    "saveDir": "./uploads"
-  }
+  ]
+  // "upload": {
+  //   "host": "127.0.0.1",
+  //   "localPort": 20015,
+  //   "remotePort": 20016,
+  //   "saveDir": "./uploads"
+  // }
 }
