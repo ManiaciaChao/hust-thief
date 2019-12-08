@@ -1,6 +1,11 @@
 import Shell from "node-powershell";
 
-const PS_GET_USB_LETTER = `Get-Volume | where DriveType -eq Removable | select DriveLetter | ConvertTo-Json`;
+/**
+ * > $PS_GET_USB_LETTER
+ * E:
+ * F:
+ */
+export const PS_GET_USB_LETTER = `Get-WmiObject -Class Win32_Volume | Where {$_.DriveType -eq 5} | ForEach-Object {$_.DriveLetter}`;
 
 export const shell = new Shell({
   executionPolicy: "Bypass",
@@ -12,11 +17,11 @@ export const getUSBLetters = async () => {
     await shell.addCommand(PS_GET_USB_LETTER);
     const res = await shell.invoke();
     if (!res) {
-        return []
+      return [];
     } else {
-        return JSON.parse(res).map(a=>a.DriveLetter) as string[];
+      return res.split("\n");
     }
   } catch (e) {
-    throw(e)
+    throw e;
   }
 };
